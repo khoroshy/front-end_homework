@@ -181,3 +181,7 @@ label:hover
     font-size: 18px;
     line-height: 21px;
 }
+.button-container__submit
+{
+    cursor: pointer;
+}
