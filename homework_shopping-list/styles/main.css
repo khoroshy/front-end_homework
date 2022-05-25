@@ -136,7 +136,7 @@ label:hover
     border-bottom: 3px solid white;
     border-top: 3px solid white;
 }
-.dinner__item:nth-last-child(1)
+.dinner__item:last-child
 {
     background-color: var(--checked-item);
     color: var(--grey);
