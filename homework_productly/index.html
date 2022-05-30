@@ -21,9 +21,9 @@
                     <li class="header__menu-items-text"><a href="#" class="header__menu-items-link">Pricing</a></li>
                     <li class="header__menu-items-text"><a href="#" class="header__menu-items-link">Resources</a></li>
                 </ul>
-                <div class="header__buttons">
-                    <button class="header__buttons-sign-in">Sign In</button>
-                    <button class="header__buttons-sign-up">Sign Up</button>
+                <div class="header__btn">
+                    <button class="header__btn-sign-in">Sign In</button>
+                    <button class="header__btn-sign-up">Sign Up</button>
                 </div>
             </nav>
         </div>
@@ -31,14 +31,75 @@
     <section class="hero">
         <div class="container hero__container">
             <div class="hero__about">
-                <h1 class="hero__about-title">The Design Thinking superpowers</h1>
-                <p class="hero__about-description">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
-                <button class="hero__about-button">Get started</button>
+                <h1 class="hero__title">The Design Thinking superpowers</h1>
+                <p class="hero__description">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
+                <div class="hero__buttons">
+                    <button class="hero__main-btn">Get started</button>
+                    <div class="hero__link-btn">
+                        <img src="./src/svg/triangle.svg" alt="" class="hero__link-img">
+                        <span>Watch the video</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero__image">
-                <img src="./src/img/hero.png" width="644px" alt="Productly People">
-            </div>
+            <img src="./src/img/hero.png" width="644px" alt="Productly People" class="hero__image">
         </div>
     </section>
+    <section class="features">
+        <div class="container features__container">
+            <h2 class="features__title">
+                We design tools to unveil your superpowers
+            </h2>
+            <img src="./src/img/bg.jpg" alt="Productly background" class="features__bg">
+            <div class="features__cards">
+                <div class="features__cards-item">
+                    <img src="./src/svg/icon-1.svg" alt="" width="50px" class="features__cards-item-img">
+                    <p class="features__cards-item-title">First click tests</p>
+                    <p class="features__cards-item-description">While most people enjoy casino gambling,</p>
+                </div>
+                <div class="features__cards-item">
+                    <img src="./src/svg/icon-2.svg" alt="" width="50px" class="features__cards-item-img">
+                    <p class="features__cards-item-title">Design surveys</p>
+                    <p class="features__cards-item-description">Sports betting, lottery and bingo playing for the fun</p>
+                </div>
+                <div class="features__cards-item">
+                    <img src="./src/svg/icon-3.svg" alt="" width="50px" class="features__cards-item-img">
+                    <p class="features__cards-item-title">Preference tests</p>
+                    <p class="features__cards-item-description">The Myspace page defines the individual.</p>
+                </div>
+                <div class="features__cards-item">
+                    <img src="./src/svg/icon-4.svg" alt="" width="50px" class="features__cards-item-img">
+                    <p class="features__cards-item-title">Five second tests</p>
+                    <p class="features__cards-item-description">Personal choices and the overall personality of the person.</p>
+                </div>
+            </div>
+            <button class="features__signup">Sign up Now</button>
+        </div>
+    </section>
+    <footer class="footer">
+        <hr class="footer__line">
+        <div class="container footer__container">
+            <a href="#" class="footer__logo"></a>
+            <div class="footer__links">
+                <h3 class="footer__title">Quick Links</h3>
+                <a href="#" class="footer__links-text">About Us</a>
+                <a href="#" class="footer__links-text">Blog</a> 
+                <a href="#" class="footer__links-text">Contact</a> 
+                <a href="#" class="footer__links-text">FAQ</a>  
+            </div>
+            <div class="footer__links">
+                <h3 class="footer__title">Legal Stuff</h3>
+                <a href="#" class="footer__links-text">Disclaimer</a>
+                <a href="#" class="footer__links-text">Financing</a> 
+                <a href="#" class="footer__links-text">Privacy Policy</a> 
+                <a href="#" class="footer__links-text">Terms of Service</a>  
+            </div>
+            <form class="footer__form">
+                <h3 class="footer__title">Knowing you're always on the best energy deal. 
+                </h3>
+                <input class="footer__input" type="tel" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" value="Enter your phone number" id="footer__input-phone">
+                <input class="footer__button" type="submit" value="Submit">
+            </form>
+        </div>
+    </footer>
 </body>
 </html>
