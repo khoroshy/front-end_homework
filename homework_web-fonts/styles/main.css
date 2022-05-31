@@ -99,7 +99,7 @@ a
 .main__title
 {
     display: flex;
-    text-align: center;
+    text-align: left;
     gap: 10px;
     font-family: 'Francois One';
     font-style: normal;
@@ -108,6 +108,7 @@ a
 }
 .main__sup
 {
+    text-align: left;
     font-family: 'Farro';
     font-style: normal;
     font-weight: 300;
