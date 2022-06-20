@@ -1,0 +1,248 @@
+/* Global styles */
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+}
+
+:root{
+    --white: #ffffff;
+    --title: #3C3C3C;
+    --text: #646464;
+    --hover: #18B5DC;
+    --border: #BDBDBD;
+    --divider: #DDDBDB;
+    --hero-bg: #F6F6F6;
+    --card-bg: #18B5DC;
+    --social-bg: #5DCBE6;
+}
+
+a{
+    color: var(--title);
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    color: var(--hover);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+li{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--title);
+
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.logo{
+    max-width: 170px;
+    cursor: pointer;
+}
+
+/* Hedaer */
+
+.header{
+    border: 1px solid var(--border);
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    margin: 10px 0px;
+}
+.header__menu{
+    display: flex;
+    gap: 30px;
+}
+.header__button{
+    width: 130px;
+    height: 42px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    background: none;
+    color: var(--title);
+}
+
+.header__button:hover{
+    background: var(--hover);
+    color: var(--white);
+    border: 1px solid var(--hover);
+}
+
+/* Hero */
+
+.hero{
+    background: #F6F6F6;
+}
+
+.hero__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__title{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    margin: 150px 0px 20px;
+}
+
+.hero__divider{
+    width: 45px;
+    height: 4px;
+    left: 697px;
+    top: 284px;
+    background: var(--divider);
+    margin: 0px 0px 40px;
+}
+
+.hero__description{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    max-width: 570px;
+    margin: 0px 0px 60px;
+}
+
+.hero__cards{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0px 0px 150px;
+}
+
+.hero__card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.hero__card-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    width: 270px;
+    height: 270px;
+    margin: 0px 0px 20px;
+}
+
+.hero__card-item:hover > .hero__socials{
+    display: flex;
+}
+
+.hero__card-item:hover > .hero__photo{
+    display: none;
+}
+
+.hero__socials{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hero__socials-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--social-bg);
+}
+
+.hero__socials-box:hover{
+    background: var(--white);
+    
+}
+
+.hero__socials-box:hover > .hero__social-link > .hero__social-img{
+    filter: invert(45%) sepia(87%) saturate(1696%) hue-rotate(150deg) brightness(91%) contrast(89%);
+}
+
+
+.hero__name{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--title);
+}
+
+.hero__role{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--text);
+}
+
+.footer{
+    padding: 40px 0px 0px;
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.footer__menu{
+    display: flex;
+    gap: 30px;
+}
+
+.footer__menu-item{
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer__button-container{
+    display: flex;
+    gap: 10px;
+    margin: 0px 0px 40px;
+}
+
+.footer__button-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--card-bg);
+}
+
+.footer__button-box:hover{
+    cursor: pointer;
+    background: var(--hover);
+}
+
+.footer__button-img{
+    filter: invert(45%) sepia(87%) saturate(1696%) hue-rotate(150deg) brightness(91%) contrast(89%);
+}
+
+.footer__button-box:hover > .footer__button-link > .footer__button-img{
+    filter: none;
+}
