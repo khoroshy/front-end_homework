@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 50px 0px 5px;
+}
+
+.message{
+    margin: 10px 0px 25px;
+}
+
+.message__title{
+    display: flex;
+    gap: 10px;
+}
+
+.age{
+    margin: 0px 0px 0px;
+}
