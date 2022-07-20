@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Data Types</title>
+    <style>
+                *{
+            font-family: sans-serif;
+        }
+
+        input{
+            min-width: 250px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .choco-inp{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            gap: 20px;
+        }
+
+        .inp{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="choco-inp">
+        <label for="choco-inp__amount" class="choco-inp__label">Please, input a price of 1 chocolate bar (in UAH) and how many money do you have</label>
+        <input type="number" class="choco-inp__price" placeholder="Enter a price of 1 chocolate bar">
+        <input type="number" class="choco-inp__balance" placeholder="Enter your balance">
+        <button class="choco-inp__calculate">Calculate</button>
+    </div>
+    <div class="choco-out">
+        <h1 class="choco-out__h1">You can buy <span class="choco-out__amount">0 chocolates</span></h1>
+        <h2 class="choco-out__h2">You change is <span class="choco-out__change">0</span> UAH</h2>
+    </div>
+    <div class="number">
+        <div class="number__inp-box">
+            <label for="number__inp" class="number__label">Insert a random number</label>
+            <input type="number" class="number__inp">
+            <button class="number__btn">Display backwards</button>
+        </div>
+        <div class="number__out-box">
+            <h1 class="number__text">Your number is <span class="number__out">0</span> backwards</h1>
+        </div>
+    </div>
+</div>
+<script>
+    
+let btn1 = document.querySelector('.choco-inp__calculate');
+
+btn1.onclick = function(){
+    let price = document.querySelector('.choco-inp__price').value;
+    let balance = document.querySelector('.choco-inp__balance').value;
+    let chocoOut = document.querySelector('.choco-out__amount');
+    let changeOut = document.querySelector('.choco-out__change');
+    let calc = balance / price;
+    let calcRes = Math.trunc(calc);
+    let change = balance - (price * calcRes);
+
+    if(balance > price){
+    chocoOut.innerHTML = calcRes + '&#32' + 'chocolates';
+    changeOut.innerHTML = change.toFixed(2);
+    } else if (balance < price){
+        chocoOut.innerHTML = '0 chocolates';
+        changeOut.innerHTML = '0';
+    };
+}
+
+let btn2 = document.querySelector('.number__btn');
+
+btn2.onclick = () =>{
+    let numInitial = document.querySelector('.number__inp').value;
+    let out = document.querySelector('.number__out');
+    let numArr = numInitial.split('');
+    let numRev = numArr.reverse('');
+    let num = numRev.join('')
+    console.log(num);
+    out.innerHTML = num;
+}
+</script>
+</body>
+</html>
+

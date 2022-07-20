@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Loops</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        h1{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            margin: 50px 0px;
+        }
+        .number__input{
+            width: 35px;
+        }
+
+        .sum{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container age__container">
+        <div class="age">
+            <form action="submit" class="age__form">
+                <label for="age__input" class="age__label">How old are you?</label>
+                <input type="numer" class="age__input" pattern="[0-9]+" minlength="1" maxlength="2" placeholder="Input numer and hit 'Enter'" required>
+            </form>
+        </div>
+        <h1 class="age__output">Enter your age</h1>
+    </div>
+    <div class="container number__container">
+        <div class="number">
+            <label for="number__input" class="number__label">Insert a number to generate a symbol</label>
+            <input type="numer" class="number__input" pattern="[0-9]+" minlength="1" maxlength="1" required>
+            <button class="number__button">Generate</button>
+        </div>
+        <h1 class="num-out"></h1>
+    </div>
+    <div class="container sum__container">
+        <div class="sum">
+            <form action="" class="sum__form">
+                <label for="" class="sum__label">Input an array of numbers to get their sum</label>
+                <input type="number" class="sum__input" minlength="1" placeholder="Hit 'Enter' after input">
+            </form>
+            <h1 class="sum__out"></h1>
+        </div>
+    </div>
+<script>
+        const ageForm = document.querySelector('.age__form');
+
+        ageForm.addEventListener("submit", (e)=> {
+            e.preventDefault();
+
+            const age = document.querySelector('.age__input').value;
+            const ageOut = document.querySelector('.age__output');
+            console.log(age);
+
+            if(age >= 60){
+                ageOut.innerHTML = 'You are a retiree';
+            } else if(age >= 18){
+                ageOut.innerHTML = 'You are an adult';
+            } else if(age >= 12){
+                ageOut.innerHTML = 'You are a teenager';
+            } else if(age <= 11){
+                ageOut.innerHTML = 'You are a child';
+            }
+        });
+
+        const numBtn = document.querySelector('.number__button');
+
+        numBtn.onclick = () =>{
+            const num = document.querySelector('.number__input').value;
+            const numOut = document.querySelector('.num-out');
+            
+            switch(num){
+                case "0":
+                    numOut.innerHTML = ')'
+                    break;
+                case "1":
+                    numOut.innerHTML = '!'
+                    break;
+                case "2":
+                    numOut.innerHTML = '@'
+                    break;
+                case "3":
+                    numOut.innerHTML = '#'
+                    break;
+                case "4":
+                    numOut.innerHTML = '$'
+                    break;
+                case "5":
+                    numOut.innerHTML = '%'
+                    break;
+                case "6":
+                    numOut.innerHTML = '^'
+                    break;
+                case "7":
+                    numOut.innerHTML = '&'
+                    break;
+                case "8":
+                    numOut.innerHTML = '*'
+                    break;
+                case "9":
+                    numOut.innerHTML = '('
+                    break;
+                default:
+                    numOut.innerHTML = 'Please enter a number from 0 to 9';
+            };
+        };
+
+        const sumForm = document.querySelector('.sum__form');
+        const sumOut = document.querySelector('.sum__out');
+
+        sumForm.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            let numValue = document.querySelector('.sum__input').value;
+            let numArr = Array.from(String(numValue), Number);
+            let arr = numArr;
+            let sum = 0;
+
+            for(let num of arr){
+                sum = sum + num;
+            }
+
+            sumOut.innerHTML = sum;
+        });
+
+
+</script>
+</body>
+</html>
