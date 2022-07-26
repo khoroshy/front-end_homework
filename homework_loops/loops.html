@@ -63,6 +63,10 @@
         </div>
     </div>
 <script>
+    // 1. Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), 
+    // підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), 
+    // передбач можливість введення невірних даних.
+
         const ageForm = document.querySelector('.age__form');
 
         ageForm.addEventListener("submit", (e)=> {
@@ -83,7 +87,10 @@
             }
         });
 
-        const numBtn = document.querySelector('.number__button');
+    // 2. Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, 
+    // який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
+        
+    const numBtn = document.querySelector('.number__button');
 
         numBtn.onclick = () =>{
             const num = document.querySelector('.number__input').value;
@@ -125,6 +132,8 @@
             };
         };
 
+    // 3. Підрахуй суму всіх чисел в заданому користувачем діапазоні.
+
         const sumForm = document.querySelector('.sum__form');
         const sumOut = document.querySelector('.sum__out');
 
@@ -141,6 +150,9 @@
 
             sumOut.innerHTML = sum;
         });
+
+    // 4 та 5 завдання доки важко сприйняти через математику (ще й на українській, соррі), тому загрузив без цих задач щоб ти міг  подивитись
+    // По можливості постараюсь розібратись та вирішити останні 2 таски з мінімуму
 
 
 </script>
